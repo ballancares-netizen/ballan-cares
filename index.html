@@ -1,21 +1,22 @@
-here
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Ballan Cares is a faith-inspired community development organisation serving vulnerable children, families and communities through compassion and practical solutions.">
+
   <title>Ballan Cares | Restoring Hope. Transforming Lives.</title>
 
   <style>
     :root {
-      --green: #174b35;
-      --dark-green: #103525;
-      --gold: #d5a443;
-      --cream: #f7f6f0;
+      --green: #17613d;
+      --deep-green: #10452d;
+      --light-green: #edf6ef;
       --white: #ffffff;
-      --text: #26332c;
-      --muted: #66716a;
+      --gold: #d5a443;
+      --text: #26352d;
+      --muted: #637168;
     }
 
     * {
@@ -30,9 +31,9 @@ here
 
     body {
       font-family: Arial, Helvetica, sans-serif;
+      background: var(--white);
       color: var(--text);
       line-height: 1.7;
-      background: var(--white);
     }
 
     img {
@@ -47,11 +48,11 @@ here
       background: var(--white);
       padding: 12px 7%;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       flex-wrap: wrap;
       gap: 15px;
-      box-shadow: 0 2px 10px rgba(0,0,0,.07);
+      border-bottom: 3px solid var(--green);
     }
 
     .brand img {
@@ -63,7 +64,7 @@ here
     nav {
       display: flex;
       flex-wrap: wrap;
-      gap: 18px;
+      gap: 17px;
     }
 
     nav a {
@@ -79,9 +80,8 @@ here
     .hero {
       min-height: 520px;
       background:
-        linear-gradient(rgba(10,38,25,.72), rgba(10,38,25,.72)),
-        url("child-green.jpg.")
-        center / cover no-repeat;
+        linear-gradient(rgba(9, 45, 27, .60), rgba(9, 45, 27, .60)),
+        url("child-green.jpg.") center / cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -95,7 +95,7 @@ here
     }
 
     .hero h1 {
-      font-size: clamp(34px, 6vw, 58px);
+      font-size: clamp(35px, 6vw, 58px);
       line-height: 1.15;
       margin-bottom: 20px;
     }
@@ -111,16 +111,23 @@ here
 
     .button {
       display: inline-block;
-      background: var(--gold);
-      color: var(--dark-green);
-      padding: 12px 23px;
+      background: var(--green);
+      color: var(--white);
+      padding: 12px 24px;
       border-radius: 4px;
       font-weight: bold;
       margin: 5px;
+      border: 1px solid var(--green);
     }
 
     .button:hover {
-      background: var(--white);
+      background: var(--deep-green);
+    }
+
+    .button.gold {
+      background: var(--gold);
+      color: var(--deep-green);
+      border-color: var(--gold);
     }
 
     section {
@@ -145,7 +152,7 @@ here
     }
 
     .about {
-      background: var(--cream);
+      background: var(--light-green);
     }
 
     .about-content {
@@ -166,14 +173,14 @@ here
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
       gap: 22px;
-      max-width: 1000px;
+      max-width: 1050px;
       margin: auto;
     }
 
     .identity-card {
-      background: var(--cream);
+      background: var(--light-green);
       padding: 28px 22px;
-      border-bottom: 4px solid var(--gold);
+      border-left: 4px solid var(--green);
       border-radius: 5px;
     }
 
@@ -183,7 +190,7 @@ here
     }
 
     .programmes {
-      background: #f8f9f6;
+      background: var(--light-green);
     }
 
     .programme-grid {
@@ -198,7 +205,8 @@ here
       background: var(--white);
       border-radius: 6px;
       overflow: hidden;
-      box-shadow: 0 3px 14px rgba(0,0,0,.07);
+      border: 1px solid #dce9df;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, .06);
     }
 
     .card img {
@@ -206,6 +214,7 @@ here
       height: 190px;
       object-fit: cover;
       display: block;
+      background: #e5eee7;
     }
 
     .card-content {
@@ -224,7 +233,7 @@ here
     }
 
     .football h2 {
-      color: var(--gold);
+      color: var(--white);
       font-size: 32px;
       margin-bottom: 15px;
     }
@@ -239,7 +248,7 @@ here
     }
 
     .involved {
-      background: var(--cream);
+      background: var(--light-green);
       text-align: center;
     }
 
@@ -265,10 +274,11 @@ here
     }
 
     footer {
-      background: var(--dark-green);
+      background: var(--deep-green);
       color: var(--white);
       text-align: center;
       padding: 30px 8%;
+      border-top: 4px solid var(--gold);
     }
 
     footer p {
@@ -295,6 +305,10 @@ here
         font-size: 13px;
       }
 
+      .brand img {
+        width: 155px;
+      }
+
       .hero {
         min-height: 440px;
       }
@@ -310,10 +324,6 @@ here
       .section-heading h2,
       .football h2 {
         font-size: 27px;
-      }
-
-      .brand img {
-        width: 155px;
       }
     }
   </style>
@@ -352,7 +362,7 @@ here
           through faith-inspired compassion and practical solutions.
         </p>
 
-        <a class="button" href="#about">Discover Ballan Cares</a>
+        <a class="button gold" href="#about">Discover Ballan Cares</a>
         <a class="button" href="#contact">Connect With Us</a>
       </div>
     </section>
@@ -435,7 +445,7 @@ here
         <div class="card">
           <img
             src="children-support.jpg"
-            alt="Child featured in the Children Support programme"
+            alt="Child featured in Children Support"
             loading="lazy">
           <div class="card-content">
             <h3>Children Support</h3>
@@ -567,7 +577,7 @@ here
           to learn, participate and grow.
         </p>
 
-        <a class="button" href="#contact">Get In Touch</a>
+        <a class="button gold" href="#contact">Get In Touch</a>
       </div>
     </section>
 
@@ -614,7 +624,8 @@ here
 
         <p>
           WhatsApp:
-          <a href="https://wa.me/256760678979" target="_blank" rel="noopener">
+          <a href="https://wa.me/256760678979"
+             target="_blank" rel="noopener">
             Chat with Ballan Cares
           </a>
         </p>
