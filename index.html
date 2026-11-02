@@ -2,515 +2,635 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ballan Cares | Restoring Hope. Transforming Lives.</title>
+  <meta name="description" content="Ballan Cares is a faith-inspired community development organisation serving vulnerable children, families and communities through compassion and practical solutions.">
 
-<meta name="description" content="Ballan Cares is a faith-inspired non-profit community development organisation serving vulnerable children, families and communities through compassion and practical solutions.">
+  <title>Ballan Cares | Restoring Hope. Transforming Lives.</title>
 
-<meta property="og:title" content="Ballan Cares | Restoring Hope. Transforming Lives.">
-<meta property="og:description" content="Faith-inspired, serving communities through compassion and practical solutions.">
-<meta property="og:image" content="https://i.ibb.co/RptxKdB3/ballan-cares-logo.png">
-<meta property="og:type" content="website">
+  <style>
+    :root {
+      --green: #174b35;
+      --dark-green: #103525;
+      --gold: #d5a443;
+      --cream: #f7f6f0;
+      --white: #ffffff;
+      --text: #26332c;
+      --muted: #66716a;
+    }
 
-<style>
-:root {
-  --green: #174b35;
-  --deep: #103524;
-  --gold: #d6a746;
-  --cream: #f7f6f0;
-  --white: #ffffff;
-  --text: #34443a;
-}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-html {
-  scroll-behavior: smooth;
-}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      line-height: 1.7;
+      background: var(--white);
+    }
 
-body {
-  font-family: Arial, sans-serif;
-  color: var(--text);
-  line-height: 1.7;
-}
+    img {
+      max-width: 100%;
+    }
 
-a {
-  text-decoration: none;
-}
+    a {
+      text-decoration: none;
+    }
 
-header {
-  background: var(--deep);
-  padding: 14px 6%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 15px;
-}
+    header {
+      background: var(--white);
+      padding: 12px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,.07);
+    }
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: white;
-  font-size: 22px;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
+    .brand img {
+      width: 175px;
+      height: auto;
+      display: block;
+    }
 
-.brand img {
-  width: 58px;
-  height: 58px;
-  object-fit: contain;
-  background: white;
-  border-radius: 50%;
-}
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
 
-.brand span {
-  color: var(--gold);
-}
+    nav a {
+      color: var(--green);
+      font-size: 14px;
+      font-weight: bold;
+    }
 
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 17px;
-  align-items: center;
-}
+    nav a:hover {
+      color: var(--gold);
+    }
 
-nav a {
-  color: white;
-  font-size: 13px;
-}
+    .hero {
+      min-height: 520px;
+      background:
+        linear-gradient(rgba(10,38,25,.72), rgba(10,38,25,.72)),
+        url("https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=1400&q=85")
+        center / cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 8%;
+      color: var(--white);
+    }
 
-nav a:hover {
-  color: var(--gold);
-}
+    .hero-content {
+      max-width: 850px;
+    }
 
-.nav-button,
-.button {
-  display: inline-block;
-  background: var(--gold);
-  color: var(--deep);
-  padding: 12px 23px;
-  border-radius: 5px;
-  font-weight: bold;
-}
+    .hero h1 {
+      font-size: clamp(34px, 6vw, 58px);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
 
-.hero {
-  min-height: 510px;
-  background:
-    linear-gradient(rgba(12,43,29,.65),rgba(12,43,29,.65)),
-    url("homepage-mother-child.jpg")
-    center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 85px 7%;
-  color: white;
-}
+    .hero h1 span {
+      color: var(--gold);
+    }
 
-.hero-content {
-  max-width: 850px;
-}
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 28px;
+    }
 
-.hero h1 {
-  font-size: clamp(36px, 6vw, 62px);
-  line-height: 1.15;
-  margin-bottom: 20px;
-}
+    .button {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--dark-green);
+      padding: 12px 23px;
+      border-radius: 4px;
+      font-weight: bold;
+      margin: 5px;
+    }
 
-.tagline {
-  color: var(--gold);
-  font-size: 23px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
+    .button:hover {
+      background: var(--white);
+    }
 
-.hero p {
-  font-size: 18px;
-  margin-bottom: 30px;
-}
+    section {
+      padding: 70px 8%;
+      scroll-margin-top: 20px;
+    }
 
-.section {
-  padding: 75px 8%;
-}
+    .section-heading {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 38px;
+    }
 
-.section h2 {
-  text-align: center;
-  color: var(--green);
-  font-size: 32px;
-  margin-bottom: 18px;
-}
+    .section-heading h2 {
+      color: var(--green);
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
 
-.intro {
-  max-width: 820px;
-  text-align: center;
-  margin: 0 auto 35px;
-}
+    .section-heading p {
+      color: var(--muted);
+    }
 
-.cream {
-  background: var(--cream);
-}
+    .about {
+      background: var(--cream);
+    }
 
-.about-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
-  gap: 28px;
-  align-items: center;
-}
+    .about-content {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
 
-.about-grid img {
-  width: 100%;
-  border-radius: 10px;
-  max-height: 330px;
-  object-fit: cover;
-}
+    .about-content p {
+      margin-bottom: 15px;
+    }
 
-.about-text h3 {
-  color: var(--green);
-  font-size: 23px;
-  margin-bottom: 12px;
-}
+    .identity {
+      background: var(--white);
+    }
 
-.values {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
-  gap: 22px;
-  margin-top: 35px;
-}
+    .identity-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 22px;
+      max-width: 1000px;
+      margin: auto;
+    }
 
-.card {
-  background: white;
-  border-radius: 9px;
-  overflow: hidden;
-  box-shadow: 0 4px 18px rgba(0,0,0,.07);
-  border-bottom: 4px solid var(--gold);
-}
+    .identity-card {
+      background: var(--cream);
+      padding: 28px 22px;
+      border-bottom: 4px solid var(--gold);
+      border-radius: 5px;
+    }
 
-.card img {
-  width: 100%;
-  height: 170px;
-  object-fit: cover;
-}
+    .identity-card h3 {
+      color: var(--green);
+      margin-bottom: 10px;
+    }
 
-.card-content {
-  padding: 22px;
-}
+    .programmes {
+      background: #f8f9f6;
+    }
 
-.card h3 {
-  color: var(--green);
-  margin-bottom: 8px;
-  font-size: 19px;
-}
+    .programme-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 24px;
+      max-width: 1150px;
+      margin: auto;
+    }
 
-.football {
-  background: #edf3ed;
-}
+    .card {
+      background: var(--white);
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 3px 14px rgba(0,0,0,.07);
+    }
 
-.football-content {
-  max-width: 850px;
-  margin: auto;
-  text-align: center;
-}
+    .card img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      display: block;
+    }
 
-.football img {
-  width: 100%;
-  max-height: 370px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin: 25px 0;
-}
+    .card-content {
+      padding: 21px;
+    }
 
-.involved {
-  background: var(--green);
-  color: white;
-  text-align: center;
-}
+    .card-content h3 {
+      color: var(--green);
+      margin-bottom: 9px;
+    }
 
-.involved h2 {
-  color: white;
-}
+    .football {
+      background: var(--green);
+      color: var(--white);
+      text-align: center;
+    }
 
-.involved p {
-  max-width: 750px;
-  margin: auto;
-}
+    .football h2 {
+      color: var(--gold);
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
 
-.contact {
-  background: var(--cream);
-  text-align: center;
-}
+    .football-content {
+      max-width: 850px;
+      margin: auto;
+    }
 
-.contact-details {
-  max-width: 650px;
-  margin: 30px auto 0;
-  display: grid;
-  gap: 17px;
-}
+    .football-content p {
+      margin-bottom: 15px;
+    }
 
-.contact-item {
-  background: white;
-  padding: 20px;
-  border-left: 4px solid var(--gold);
-  border-radius: 7px;
-}
+    .involved {
+      background: var(--cream);
+      text-align: center;
+    }
 
-.contact-item h3 {
-  color: var(--green);
-}
+    .involved-content {
+      max-width: 800px;
+      margin: auto;
+    }
 
-.contact-item a {
-  color: var(--green);
-  font-weight: bold;
-  overflow-wrap: anywhere;
-}
+    .contact {
+      background: var(--white);
+      text-align: center;
+    }
 
-footer {
-  background: var(--deep);
-  color: white;
-  text-align: center;
-  padding: 35px 6%;
-}
+    .contact-details {
+      margin: 25px auto;
+      line-height: 2.2;
+    }
 
-footer strong {
-  color: var(--gold);
-  font-size: 21px;
-}
+    .contact-details a {
+      color: var(--green);
+      font-weight: bold;
+      overflow-wrap: anywhere;
+    }
 
-footer p {
-  margin-top: 8px;
-  font-size: 14px;
-}
+    footer {
+      background: var(--dark-green);
+      color: var(--white);
+      text-align: center;
+      padding: 30px 8%;
+    }
 
-@media(max-width:700px) {
-  header {
-    justify-content: center;
-  }
+    footer p {
+      margin: 5px 0;
+    }
 
-  nav {
-    justify-content: center;
-  }
+    footer .tagline {
+      color: var(--gold);
+      font-weight: bold;
+    }
 
-  .hero {
-    min-height: 430px;
-  }
+    @media (max-width: 700px) {
+      header {
+        justify-content: center;
+        text-align: center;
+      }
 
-  .section {
-    padding: 55px 6%;
-  }
-}
-</style>
+      nav {
+        justify-content: center;
+        gap: 12px;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+      .hero {
+        min-height: 440px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 55px 6%;
+      }
+
+      .section-heading h2,
+      .football h2 {
+        font-size: 27px;
+      }
+
+      .brand img {
+        width: 155px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <a href="#home" class="brand">
-    <img src="https://i.ibb.co/RptxKdB3/ballan-cares-logo.png" alt="Ballan Cares logo">
-    <div>BALLAN <span>CARES</span></div>
-  </a>
+  <header>
+    <a class="brand" href="#home" aria-label="Ballan Cares home">
+      <img
+        src="https://i.ibb.co/RptxKdB3/ballan-cares-logo.png"
+        alt="Ballan Cares logo">
+    </a>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#vision">Our Vision</a>
-    <a href="#programmes">Programmes</a>
-    <a href="#football">Youth Football</a>
-    <a href="#contact">Contact</a>
-    <a href="#involved" class="nav-button">Get Involved</a>
-  </nav>
-</header>
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#identity">Our Direction</a>
+      <a href="#programmes">Programmes</a>
+      <a href="#football">Youth Football</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<section class="hero" id="home">
-  <div class="hero-content">
-    <h1>Restoring Hope. Transforming Lives.</h1>
-    <div class="tagline">Welcome to Ballan Cares</div>
-    <p>
-      Faith-inspired, serving communities through compassion
-      and practical solutions. Together, we believe in a future
-      where every person has hope, dignity and opportunities to thrive.
-    </p>
-    <a href="#about" class="button">Discover Our Work</a>
-  </div>
-</section>
+  <main>
 
-<section class="section" id="about">
-  <h2>Who We Are</h2>
-  <div class="about-grid">
-    <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=900&q=85" alt="Community members working together">
-    <div class="about-text">
-      <h3>About Ballan Cares</h3>
-      <p>
-        Ballan Cares (BC) is a faith-inspired non-profit community
-        development organisation serving vulnerable children,
-        families and communities.
-      </p>
-      <p>
-        Our approach is rooted in compassion, dignity, education,
-        healthcare support, food security, empowerment and
-        sustainable community development.
-      </p>
-    </div>
-  </div>
-</section>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>
+          Restoring Hope.<br>
+          <span>Transforming Lives.</span>
+        </h1>
 
-<section class="section cream" id="vision">
-  <h2>Our Vision</h2>
-  <p class="intro">
-    Transformed communities where vulnerable lives receive hope,
-    dignity and opportunities to thrive.
-  </p>
+        <p>
+          Serving vulnerable children, families and communities
+          through faith-inspired compassion and practical solutions.
+        </p>
 
-  <h2>Our Mission</h2>
-  <p class="intro">
-    To serve communities through faith-based compassion and
-    practical solutions addressing social, spiritual and
-    development needs.
-  </p>
-</section>
-
-<section class="section" id="programmes">
-  <h2>Our Programme Areas</h2>
-  <p class="intro">
-    We are committed to serving people and strengthening
-    communities through different areas of support and development.
-  </p>
-
-  <div class="values">
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=700&q=80" alt="Children">
-      <div class="card-content">
-        <h3>Children Support</h3>
-        <p>Promoting care, protection and opportunities for vulnerable children.</p>
+        <a class="button" href="#about">Discover Ballan Cares</a>
+        <a class="button" href="#contact">Connect With Us</a>
       </div>
-    </div>
+    </section>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=700&q=80" alt="Education">
-      <div class="card-content">
-        <h3>Education</h3>
-        <p>Encouraging access to learning and educational opportunities.</p>
+    <section class="about" id="about">
+      <div class="section-heading">
+        <h2>Who We Are</h2>
+        <p>Compassion expressed through practical action.</p>
       </div>
-    </div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=700&q=80" alt="Healthcare">
-      <div class="card-content">
-        <h3>Healthcare Support</h3>
-        <p>Promoting community wellbeing through healthcare support.</p>
+      <div class="about-content">
+        <p>
+          Ballan Cares is a faith-inspired community development
+          organisation committed to serving vulnerable children,
+          families and communities.
+        </p>
+
+        <p>
+          We believe every person deserves dignity, care, hope and
+          opportunities to build a better future. Our approach is
+          grounded in compassion, service and practical community
+          solutions.
+        </p>
+
+        <p>
+          Through our areas of commitment, we seek to contribute
+          to positive and sustainable change in the communities
+          we serve.
+        </p>
       </div>
-    </div>
+    </section>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=700&q=80" alt="Agriculture">
-      <div class="card-content">
-        <h3>Agriculture & Food Security</h3>
-        <p>Encouraging sustainable agriculture and stronger food security.</p>
+    <section class="identity" id="identity">
+      <div class="section-heading">
+        <h2>Our Vision, Mission & Values</h2>
+        <p>The purpose and principles that guide Ballan Cares.</p>
       </div>
-    </div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1437482078695-73f5ca6c96e2?auto=format&fit=crop&w=700&q=80" alt="Clean water">
-      <div class="card-content">
-        <h3>Clean Water</h3>
-        <p>Supporting the aspiration for improved access to clean water.</p>
+      <div class="identity-grid">
+
+        <div class="identity-card">
+          <h3>Our Vision</h3>
+          <p>
+            Transformed communities where vulnerable lives receive
+            hope, dignity and opportunities to thrive.
+          </p>
+        </div>
+
+        <div class="identity-card">
+          <h3>Our Mission</h3>
+          <p>
+            To serve communities through faith-based compassion
+            and practical solutions addressing social, spiritual
+            and development needs.
+          </p>
+        </div>
+
+        <div class="identity-card">
+          <h3>Our Values</h3>
+          <p>
+            Compassion, faith, dignity, service, inclusion,
+            responsibility and commitment to positive change.
+          </p>
+        </div>
+
       </div>
-    </div>
+    </section>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=700&q=80" alt="Community">
-      <div class="card-content">
-        <h3>Elderly Care</h3>
-        <p>Promoting dignity, compassion and support for older people.</p>
+    <section class="programmes" id="programmes">
+      <div class="section-heading">
+        <h2>Our Programme Areas</h2>
+        <p>
+          Areas through which Ballan Cares is committed to
+          supporting individuals and communities.
+        </p>
       </div>
-    </div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=700&q=80" alt="Community empowerment">
-      <div class="card-content">
-        <h3>Community Empowerment</h3>
-        <p>Encouraging positive participation and sustainable community development.</p>
+      <div class="programme-grid">
+
+        <div class="card">
+          <img
+            src="children-support.jpg"
+            alt="Child featured in the Children Support programme"
+            loading="lazy">
+          <div class="card-content">
+            <h3>Children Support</h3>
+            <p>
+              Promoting care, protection, dignity and opportunities
+              for vulnerable children.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=700&q=80"
+            alt="Learning environment"
+            loading="lazy">
+          <div class="card-content">
+            <h3>Education</h3>
+            <p>
+              Encouraging access to learning and opportunities
+              for personal development.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=700&q=80"
+            alt="Healthcare professional"
+            loading="lazy">
+          <div class="card-content">
+            <h3>Healthcare Support</h3>
+            <p>
+              Promoting health awareness, wellbeing and access
+              to appropriate healthcare support.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=700&q=80"
+            alt="Agricultural landscape"
+            loading="lazy">
+          <div class="card-content">
+            <h3>Agriculture & Food Security</h3>
+            <p>
+              Supporting sustainable agriculture, food security
+              and community resilience.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1437482078695-73f5ca6c96e2?auto=format&fit=crop&w=700&q=80"
+            alt="Clean water"
+            loading="lazy">
+          <div class="card-content">
+            <h3>Clean Water</h3>
+            <p>
+              Promoting access to safe water, hygiene awareness
+              and healthier communities.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=700&q=80"
+            alt="People spending time together"
+            loading="lazy">
+          <div class="card-content">
+            <h3>Elderly Care</h3>
+            <p>
+              Promoting dignity, respect, care and support
+              for older members of our communities.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=700&q=80"
+            alt="Community gathering"
+            loading="lazy">
+          <div class="card-content">
+            <h3>Community Empowerment</h3>
+            <p>
+              Encouraging participation, skills development
+              and positive community initiatives.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=700&q=80"
+            alt="Youth football"
+            loading="lazy">
+          <div class="card-content">
+            <h3>Youth Football</h3>
+            <p>
+              Using football to encourage teamwork, discipline,
+              confidence, inclusion and positive development.
+            </p>
+          </div>
+        </div>
+
       </div>
-    </div>
+    </section>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=700&q=80" alt="Youth football">
-      <div class="card-content">
-        <h3>Youth Development</h3>
-        <p>Creating opportunities for young people to grow and contribute positively.</p>
+    <section class="football" id="football">
+      <div class="football-content">
+        <h2>Ballan Cares Youth Football Initiative</h2>
+
+        <p>
+          Football is an opportunity to bring young people together
+          and encourage positive growth beyond the playing field.
+        </p>
+
+        <p>
+          Through this initiative, Ballan Cares aims to encourage
+          boys and girls to develop teamwork, discipline, confidence,
+          inclusion and respect while enjoying the game.
+        </p>
+
+        <p>
+          We believe every young person deserves an opportunity
+          to learn, participate and grow.
+        </p>
+
+        <a class="button" href="#contact">Get In Touch</a>
       </div>
-    </div>
+    </section>
 
-  </div>
-</section>
+    <section class="involved">
+      <div class="involved-content">
+        <div class="section-heading">
+          <h2>Be Part of the Journey</h2>
+          <p>Restoring hope takes compassion, commitment and cooperation.</p>
+        </div>
 
-<section class="section football" id="football">
-  <div class="football-content">
-    <h2>Ballan Cares Youth Football Initiative</h2>
-    <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=1200&q=85" alt="Young people playing football">
-    <p>
-      Through football, we encourage young people to develop
-      teamwork, discipline, confidence, inclusion and positive
-      community relationships. We believe football can be a
-      meaningful tool for youth development and growth.
-    </p>
-  </div>
-</section>
+        <p>
+          We welcome meaningful connections with individuals,
+          organisations and communities who share a commitment
+          to serving people and creating positive change.
+        </p>
 
-<section class="section involved" id="involved">
-  <h2>Be Part of the Journey</h2>
-  <p>
-    Join us in restoring hope and transforming lives.
-    Your encouragement, prayers, skills and support can contribute
-    to positive change in communities. Together, we can take
-    meaningful steps towards a better future.
-  </p>
-  <br>
-  <a href="#contact" class="button">Support Our Work</a>
-</section>
+        <a class="button" href="#contact">Connect With Ballan Cares</a>
+      </div>
+    </section>
 
-<section class="section contact" id="contact">
-  <h2>Contact Ballan Cares</h2>
-  <p class="intro">
-    We welcome enquiries, encouragement and opportunities to connect
-    with individuals and organisations who share our commitment
-    to serving communities.
-  </p>
+    <section class="contact" id="contact">
+      <div class="section-heading">
+        <h2>Contact Ballan Cares</h2>
+        <p>
+          For enquiries, collaboration and further information,
+          please reach out to us.
+        </p>
+      </div>
 
-  <div class="contact-details">
-    <div class="contact-item">
-      <h3>Email Address</h3>
-      <a href="mailto:Ballancares@gmail.com">Ballancares@gmail.com</a>
-    </div>
+      <div class="contact-details">
+        <p>
+          Email:
+          <a href="mailto:ballancares@gmail.com">
+            ballancares@gmail.com
+          </a>
+        </p>
 
-    <div class="contact-item">
-      <h3>Telephone</h3>
-      <a href="tel:+256760678979">0760678979</a>
-    </div>
+        <p>
+          Phone:
+          <a href="tel:+256760678979">
+            +256 760 678 979
+          </a>
+        </p>
 
-    <div class="contact-item">
-      <h3>WhatsApp</h3>
-      <a href="https://wa.me/256760678979">Chat with Ballan Cares</a>
-    </div>
-  </div>
-</section>
+        <p>
+          WhatsApp:
+          <a href="https://wa.me/256760678979" target="_blank" rel="noopener">
+            Chat with Ballan Cares
+          </a>
+        </p>
+      </div>
+    </section>
 
-<footer>
-  <strong>BALLAN CARES</strong>
-  <p>Restoring Hope. Transforming Lives.</p>
-  <p>Faith-inspired, serving communities through compassion and practical solutions.</p>
-  <p>Email: Ballancares@gmail.com</p>
-  <p>Telephone: 0760678979</p>
-  <p>&copy; 2026 Ballan Cares. All rights reserved.</p>
-</footer>
+  </main>
+
+  <footer>
+    <p><strong>BALLAN CARES</strong></p>
+    <p class="tagline">Restoring Hope. Transforming Lives.</p>
+    <p>Faith-inspired, serving communities through compassion and practical solutions.</p>
+    <p>&copy; 2026 Ballan Cares. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
